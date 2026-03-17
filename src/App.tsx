@@ -1,11 +1,12 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
-import LoginPage          from './pages/auth/LoginPage'
-import RegisterPage       from './pages/auth/RegisterPage'
-import ForgotPasswordPage from './pages/auth/ForgotPasswordPage'
-import ResetPasswordPage  from './pages/auth/ResetPasswordPage'
-import OnboardingPage     from './pages/onboarding/OnboardingPage'
-import DashboardPage      from './pages/dashboard/DashboardPage'
-import HistoryPage        from './pages/history/HistoryPage'
+import LoginPage              from './pages/auth/LoginPage'
+import RegisterPage           from './pages/auth/RegisterPage'
+import ForgotPasswordPage     from './pages/auth/ForgotPasswordPage'
+import ResetPasswordPage      from './pages/auth/ResetPasswordPage'
+import OnboardingPage         from './pages/onboarding/OnboardingPage'
+import DashboardPage          from './pages/dashboard/DashboardPage'
+import HistoryPage            from './pages/history/HistoryPage'
+import RecommendationsPage    from './pages/recommendations/RecommendationsPage'
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
         <Route path='/onboarding'      element={<OnboardingPage />} />
         <Route path='/dashboard'       element={<DashboardPage />} />
         <Route path='/history'         element={<HistoryPage />} />
+        <Route path='/recommendations' element={<RecommendationsPage />} />
         <Route path='*'                element={<Navigate to='/login' replace />} />
       </Routes>
     </BrowserRouter>
